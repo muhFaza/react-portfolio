@@ -4,6 +4,50 @@
   margin-right: 5px;
 }
 
+.contact-buttons {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.contact-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem; /* space between icon and text */
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem; /* rounded corners */
+  font-size: 1rem;
+  font-weight: 500;
+  color: white !important;
+  text-decoration: none;
+  background-color: #2d3748; /* A nice, cool dark gray (slate) */
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+
+  /* Smooth transition for all properties */
+  transition: all 0.3s ease-in-out;
+}
+
+/* Hover effect: lift the button up and change color */
+.contact-button:hover {
+  transform: translateY(-4px); /* Lifts the button slightly */
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+/* Brand-specific hover colors */
+.contact-button.email:hover {
+  background-color: #814343; /* A slightly lighter slate */
+}
+
+.contact-button.whatsapp:hover {
+  background-color: #26b35a; /* Official WhatsApp Green */
+}
+
+.contact-button.linkedin:hover {
+  background-color: #0a66c2; /* Official LinkedIn Blue */
+}
+
 .contact-form {
   padding-top: 20px;
 
@@ -25,7 +69,7 @@
 
 label {
   font-size: 1.2rem;
-  font-family: 'DomaineDispNar-Medium', sans-serif;
+  font-family: "DomaineDispNar-Medium", sans-serif;
 }
 
 .form-flex {

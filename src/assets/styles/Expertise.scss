@@ -19,6 +19,19 @@
     align-items: center;
     text-align: left;
 }
+
+
+
+.icon-container svg {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 1rem;
+    padding-top: 1rem;
+}
+
+.icon-container svg:last-child {
+    margin-right: 0;
+}
   
 .chip {
     color: rgb(39, 40, 34) !important;
@@ -61,7 +74,7 @@
 }
 
 @media screen {
-    @media (max-width: 768px) {
+    @media (max-width: 1000px) {
         .skills-container {
             display: block;
             padding-left: 5%;

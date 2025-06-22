@@ -12,55 +12,49 @@ function Timeline() {
       <div className="items-container">
         <h1>Career History</h1>
         <VerticalTimeline>
+          {/* NVX */}
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
             contentStyle={{ background: 'white', color: 'rgb(39, 40, 34)' }}
             contentArrowStyle={{ borderRight: '7px solid  white' }}
-            date="2022 - present"
+            date="April 2024 - present"
             iconStyle={{ background: '#5000ca', color: 'rgb(39, 40, 34)' }}
             icon={<FontAwesomeIcon icon={faBriefcase} />}
           >
-            <h3 className="vertical-timeline-element-title">Technology Consultant</h3>
-            <h4 className="vertical-timeline-element-subtitle">Dallas, TX</h4>
+            <h3 className="vertical-timeline-element-title">BTSE.ID (NVX) - Full Stack Developer</h3>
+            <h4 className="vertical-timeline-element-subtitle">Jakarta, Indonesia</h4>
             <p>
-              Full-stack Web Development, GenAI/LLM, Project Management, Business Development
+              Built a Web3 launchpad from scratch with React.js, Expo, Node.js and PostgreSQL. Maintained their Crypto Exchange platform with Laravel and PHP. Currently working on internal reporting tools and APIs.
             </p>
           </VerticalTimelineElement>
+
+          {/* SAVART */}
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
-            date="2020 - 2022"
+            date="January - March, 2024"
             iconStyle={{ background: '#5000ca', color: 'rgb(39, 40, 34)' }}
             icon={<FontAwesomeIcon icon={faBriefcase} />}
           >
-            <h3 className="vertical-timeline-element-title">Full Stack Engineer</h3>
-            <h4 className="vertical-timeline-element-subtitle">Laie, HI</h4>
+            <h3 className="vertical-timeline-element-title">Savart EV - Junior Full Stack Developer</h3>
+            <h4 className="vertical-timeline-element-subtitle">Sidoarjo, Indonesia</h4>
             <p>
-              Frontend Development, Backend Development, User Experience, Team Leading
+              Maintained and developed mobile application and implemented GPS tracking feature with OpenStreetMap for their electric motorcycles (React Native & Golang).
             </p>
           </VerticalTimelineElement>
+
+          {/* HACKTIV8 */}
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
-            date="2021 - 2021"
+            date="August - November, 2023"
             iconStyle={{ background: '#5000ca', color: 'rgb(39, 40, 34)' }}
             icon={<FontAwesomeIcon icon={faBriefcase} />}
           >
-            <h3 className="vertical-timeline-element-title">Staff Engineer Intern</h3>
-            <h4 className="vertical-timeline-element-subtitle">Laie, HI</h4>
+            <h3 className="vertical-timeline-element-title">Hacktiv8 Bootcamp</h3>
+            <h4 className="vertical-timeline-element-subtitle">Surabaya, Indonesia</h4>
             <p>
-              Full-stack Development, API Development, User Experience
+              Joined Hacktiv8 Bootcamp and learned Full Stack Web Development with Javascript and Golang. Completed 4 projects and participated in 2 hackathons.
             </p>
-          </VerticalTimelineElement>
-          <VerticalTimelineElement
-            className="vertical-timeline-element--work"
-            date="2020 - 2020"
-            iconStyle={{ background: '#5000ca', color: 'rgb(39, 40, 34)' }}
-            icon={<FontAwesomeIcon icon={faBriefcase} />}
-          >
-            <h3 className="vertical-timeline-element-title">Data Analyst Intern</h3>
-            <h4 className="vertical-timeline-element-subtitle">Tokyo, Japan</h4>
-            <p>
-              Automation, Data Governance, Statistical Analysis
-            </p>
+            <p style={{ fontSize: '14px' }}>Score - 99.70%</p>
           </VerticalTimelineElement>
         </VerticalTimeline>
       </div>

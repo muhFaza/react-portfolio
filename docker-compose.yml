@@ -1,0 +1,24 @@
+services:
+  # Portfolio Website
+  portfolio:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: portfolio_prod
+    ports:
+      - "80:80"     # Main HTTP port
+      - "443:443"   # Main HTTPS port
+    networks:
+      - portfolio-network
+    restart: unless-stopped
+    volumes:
+      - ./nginx/ssl:/etc/nginx/ssl:ro  # Mount SSL certificates
+    environment:
+      - NODE_ENV=production
+
+volumes:
+  portfolio_data:
+
+networks:
+  portfolio-network:
+    driver: bridge
