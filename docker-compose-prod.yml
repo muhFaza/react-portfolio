@@ -1,22 +1,20 @@
-version: '3.8'
-
 services:
   # Define the service for your portfolio application
   portfolio-app:
     # Tell Docker Compose to build the image from the current directory
     build: .
     # Give the container a friendly name for easy identification
-    container_name: portfolio-app-prod
+    container_name: portfolio-app
     # Always restart the container unless it is explicitly stopped
     restart: unless-stopped
     # Connect this service to an external network called 'nginx_proxy_network'.
     # This is how the main Nginx proxy will find and communicate with your portfolio app.
     networks:
-      - nginx_proxy_network
+      - nginx-proxy_network
 
 # Define the external network.
 # 'external: true' tells Docker Compose that this network is created elsewhere
 # (by the main nginx-proxy docker-compose file).
 networks:
-  nginx_proxy_network:
+  nginx-proxy_network:
     external: true
