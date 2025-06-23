@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import { useRef, useState } from "react";
 import "../assets/styles/Contact.scss";
 // import emailjs from '@emailjs/browser';
 import Box from "@mui/material/Box";
@@ -6,8 +6,8 @@ import Button from "@mui/material/Button";
 import SendIcon from "@mui/icons-material/Send";
 import TextField from "@mui/material/TextField";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faDocker, faLinkedin, faWhatsapp } from "@fortawesome/free-brands-svg-icons";
-import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
+import { faLinkedin, faWhatsapp } from "@fortawesome/free-brands-svg-icons";
+import { faEnvelope, faFile } from "@fortawesome/free-regular-svg-icons";
 
 function Contact() {
   const [name, setName] = useState<string>("");
@@ -133,6 +133,11 @@ function Contact() {
             <a href="http://linkedin.com/in/mfaza/" target="_blank" rel="noopener noreferrer" className="contact-button linkedin">
                 <FontAwesomeIcon icon={faLinkedin} />
                 <span>mfaza</span>
+            </a>
+            
+            <a href="https://docs.google.com/document/d/1Nr7y7GWKfqORKh_Rdb1oacl5XKm4SW579_hpAVsiaZ4" target="_blank" rel="noopener noreferrer" className="contact-button resume">
+                <FontAwesomeIcon icon={faFile} />
+                <span>Resume</span>
             </a>
           </div>
           {/* End: Added contact buttons */}

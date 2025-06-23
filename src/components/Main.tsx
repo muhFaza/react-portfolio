@@ -1,7 +1,7 @@
-import React from "react";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import "../assets/styles/Main.scss";
+import DriveFileMoveIcon from '@mui/icons-material/DriveFileMove';
 
 const CodewarsIcon = () => (
   <svg
@@ -95,6 +95,13 @@ function Main() {
             >
               <LinkedInIcon />
             </a>
+            <a
+              href="https://docs.google.com/document/d/1Nr7y7GWKfqORKh_Rdb1oacl5XKm4SW579_hpAVsiaZ4"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <DriveFileMoveIcon />
+            </a>
           </div>
           <h1>Faza, Muhammad</h1>
           <p>Full Stack Developer</p>
@@ -120,6 +127,13 @@ function Main() {
               rel="noreferrer"
             >
               <LinkedInIcon />
+            </a>
+            <a
+              href="https://docs.google.com/document/d/1Nr7y7GWKfqORKh_Rdb1oacl5XKm4SW579_hpAVsiaZ4"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <DriveFileMoveIcon />
             </a>
           </div>
         </div>
