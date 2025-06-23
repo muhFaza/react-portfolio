@@ -1,10 +1,9 @@
-import React from "react";
 import '@fortawesome/free-regular-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faReact, faDocker, faPython, faNodeJs, faLaravel, faGolang, faAws, faVuejs, faCss3, faHtml5, faGit, faJava } from '@fortawesome/free-brands-svg-icons';
+import { faReact, faDocker, faNodeJs, faLaravel, faGolang, faAws, faVuejs, faCss3, faHtml5, faGit, faJava } from '@fortawesome/free-brands-svg-icons';
 import Chip from '@mui/material/Chip';
 import '../assets/styles/Expertise.scss';
-import { faCode, faCodeBranch, faDatabase, faNetworkWired, faWifi, faWifi3 } from "@fortawesome/free-solid-svg-icons";
+// import { faCode, faCodeBranch, faDatabase, faNetworkWired, faWifi, faWifi3 } from "@fortawesome/free-solid-svg-icons";
 
 const labelsFirst = [
     "Node.js/Express",

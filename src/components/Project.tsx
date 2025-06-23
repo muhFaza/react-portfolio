@@ -1,4 +1,3 @@
-// import React from "react";
 // import mock03 from '../assets/images/mock03.png';
 // import '../assets/styles/Project.scss';
 
