@@ -1,35 +1,37 @@
-# Multi-stage build for React portfolio
-FROM node:18-alpine as build-stage
+FROM node:16-alpine AS builder
 
-# Set working directory
+# Set the working directory for our app inside the container
 WORKDIR /app
 
-# Copy package files
-COPY package*.json ./
+# Copy package.json and package-lock.json first.
+COPY package.json package-lock.json ./
 
-# Install dependencies
-RUN npm ci
+# Install project dependencies
+RUN npm install
 
-# Copy source code
+# Copy the rest of the application's source code into the container
 COPY . .
 
-# Build the React app
+# Build the application for production. This creates an optimized 'build' folder.
 RUN npm run build
 
-# Production stage with Nginx
-FROM nginx:alpine as production-stage
 
-# Copy built app from build stage
-COPY --from=build-stage /app/build /usr/share/nginx/html
+# We use a lightweight Nginx image for the final production container
+FROM nginx:1.21-alpine
 
-# Copy custom nginx config
-COPY nginx.conf /etc/nginx/nginx.conf
+# Set a working directory in the Nginx container
+WORKDIR /usr/share/nginx/html
 
-# Create directory for SSL certificates
-RUN mkdir -p /etc/nginx/ssl
+# Remove the default Nginx content
+RUN rm -rf ./*
 
-# Expose ports for HTTP and HTTPS
-EXPOSE 80 443
+# Copy the built, static files from the 'builder' stage to the Nginx public directory
+COPY --from=builder /app/build .
 
-# Start nginx
+# Expose port 80 to allow traffic to the Nginx server
+EXPOSE 80
+
+# The default command to start Nginx when the container is launched.
+# The '-g "daemon off;"' flag ensures Nginx runs in the foreground, which is
+# standard practice for Docker containers.
 CMD ["nginx", "-g", "daemon off;"]
